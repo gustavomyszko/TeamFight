@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<div class="container">
+<form action="Home" method="post">
+  <div class="form-group">
+    <label for="label_nomeContato">Nome: </label>
+    <input type="text" class="form-control" id="nomeContato" placeholder="nome" required>
+  </div>
+
+  <div class="form-group">
+    <label for="emailContato">Email: </label>
+    <input type="email" class="form-control" id="emailContato" placeholder="name@example.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="label_mensagemContato">Mensagem: </label>
+    <textarea class="form-control" id="mensagemContato" rows="10" required></textarea>
+  </div>
+
+    <button class="btn btn-primary" type="submit">Enviar</button>
+</form>
+</div>

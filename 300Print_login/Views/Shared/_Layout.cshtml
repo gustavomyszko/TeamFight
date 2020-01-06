@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 300Print</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav id="navbarPrincipal" class="navbar navbar-expand-sm navbar-toggleable-sm text-light mb-0 pb-0">
+            <div class="container" style="max-width:80%;">
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">300Print</a>
+                <button class="navbar-toggler m-0 p-0" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"   >
+                    <span class="navbar-toggler-icon text-light m-0 p-0">|menu|</span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light enableJS" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light enableJS" asp-area="" asp-controller="Loja" asp-action="Index">Loja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light enableJS" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light enableJS" asp-area="" asp-controller="Sobre" asp-action="Index">Sobre</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <partial name="_CookieConsentPartial" />
+    <main role="main" class="pb-0">
+        @RenderBody()
+    </main>
+
+    <footer id="footerPrincipal" class="text-light mb-0 pb-0">
+        <div class="container">
+            <div class="col-lg-12">
+                <hr />
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p><a href="#"><img src="~/Content/img/iconEmail.jpg" class="iconeSize mr-2" /></a>contato@300print.com.br</p>
+                        <p><a href="#"><img src="~/Content/img/iconTelefone.png" class="iconeSize mr-2" /></a>(41) 3665-4646</p>
+                        <p><a href="#"><img src="~/Content/img/iconWhatsApp.png" class="iconeSize mr-2" /></a>(41) 99999-9999  (41) 99999-9999</p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5">
+                        <p>♥ Redes Sociais ♥</p>
+                        <p>
+                            <a href="#"><img src="~/Content/img/iconFacebook.png" class="iconeSize" /></a>
+                            <a href="#"><img src="~/Content/img/inconInstagram.png" class="iconeSize" /></a>
+                            <a href="#"><img src="~/Content/img/inconLinkedIn.png" class="iconeSize" /></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr />
+                        <p>&copy; 2019 - 300Print - Estamparia Personalizada Ltda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
